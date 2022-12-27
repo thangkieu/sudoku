@@ -1,0 +1,103 @@
+body {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* height: 100vh; */
+  /* width: 100vw; */
+  padding: 2rem;
+  color: var(--primary-color);
+}
+
+.pageTitle {
+  margin: 0 0 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.sudokuBoxContainer {
+  width: var(--sudoku-width);
+  margin: auto;
+}
+
+.sudokuBox {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--border-color);
+  padding: var(--cell-padding) var(--cell-padding) 0;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: var(--shadow-color) 6px 6px 0;
+  background-color: transparent;
+}
+
+.sudokuBox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  border-left: 1px solid var(--border-color);
+  top: 0;
+  left: calc(33.3333333%);
+}
+
+.sudokuBox::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  border-left: 1px solid var(--border-color);
+  top: 0;
+  right: calc(33.3333333%);
+}
+
+.validSudoku.validSudoku input {
+  color: #3c6255;
+  background-color: #edf5df;
+  box-shadow: none;
+}
+
+.separator::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  left: 0;
+  top: calc(33.3333333%);
+}
+
+.separator::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  left: 0;
+  bottom: calc(33.3333333%);
+}
+
+.button {
+  appearance: none;
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  border: 0;
+  color: white;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-color) 4px 4px 0;
+  margin-left: 16px;
+  display: inline-block;
+}
+
+.buttonDanger {
+  background-color: transparent;
+  border: 1px solid #eb455f;
+  color: inherit;
+  box-shadow: #ffeff1 4px 4px 0;
+}
+
+.actions {
+  text-align: right;
+}

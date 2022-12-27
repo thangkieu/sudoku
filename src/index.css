@@ -1,13 +1,44 @@
+:root {
+  --primary-color: #205295;
+  --border-color: #205295;
+  --input-width: 28px;
+  --cell-padding: 8px;
+  --shadow-color: #2052952b;
+}
+
+@media screen and (min-width: 662px) {
+  :root {
+    --input-width: 40px;
+    --cell-padding: 10px;
+  }
+}
+
+html {
+  font-size: 14px;
+  --sudoku-width: calc(
+    var(--input-width) * 9 + var(--cell-padding) * 8 + 2px + var(--cell-padding) *
+      2 + var(--cell-padding) * 2
+  );
+}
+
+@media screen and (min-width: 662px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: inherit;
 }
