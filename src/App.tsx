@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useState } from "react";
 import AppStyles from "./App.module.css";
 import { Input } from "./Input";
-import { validateSudoku } from "./utils";
+import { getRootPath, validateSudoku } from "./utils";
 
 function App() {
   const formRef = useRef<HTMLFormElement>();
@@ -61,7 +61,8 @@ function App() {
           onSubmit={handleSubmit}
         >
           <h2 className={AppStyles.pageTitle}>
-            <img src="/logo192.png" alt="Logo" width="16" /> Sudoku Validator
+            <img src={getRootPath("/logo192.png")} alt="Logo" width="16" />{" "}
+            Sudoku Validator
           </h2>
           <div
             className={`${AppStyles.sudokuBox} ${
@@ -69,7 +70,7 @@ function App() {
             }`}
           >
             {Array.from({ length: 9 }).map((_, row) => (
-              <>
+              <React.Fragment key={row}>
                 {Array.from({ length: 9 }).map((_, col) => (
                   <Input
                     key={`[${row}][${col}]`}
@@ -77,7 +78,7 @@ function App() {
                     isError={Boolean(errorCells[`${row}${col}`])}
                   />
                 ))}
-              </>
+              </React.Fragment>
             ))}
             <span className={AppStyles.separator}></span>
           </div>

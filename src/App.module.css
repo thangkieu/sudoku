@@ -1,17 +1,8 @@
-body {
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* height: 100vh; */
-  /* width: 100vw; */
-  padding: 2rem;
-  color: var(--primary-color);
-}
-
 .pageTitle {
-  margin: 0 0 1rem;
+  margin: 1rem 0 2rem;
   font-weight: 500;
-  color: var(--primary-color);
+  border-bottom: 1px solid var(--shadow-color);
+  padding-bottom: 1rem;
 }
 
 .sudokuBoxContainer {
@@ -82,19 +73,19 @@ body {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 2px;
-  border: 0;
   color: white;
   margin-top: 1.5rem;
   cursor: pointer;
   box-shadow: var(--shadow-color) 4px 4px 0;
   margin-left: 16px;
   display: inline-block;
+  border: 1px solid var(--border-color);
 }
 
 .buttonDanger {
-  background-color: transparent;
-  border: 1px solid #eb455f;
-  color: inherit;
+  background-color: #ffeff1;
+  border-color: currentColor;
+  color: #eb455f;
   box-shadow: #ffeff1 4px 4px 0;
 }
 

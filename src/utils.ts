@@ -68,3 +68,7 @@ export function validateSudoku(board: number[][]): number[][] {
 
   return errorCells;
 }
+
+export function getRootPath(url: string) {
+  return `${process.env.PUBLIC_URL}${url}`;
+}
