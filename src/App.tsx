@@ -61,7 +61,12 @@ function App() {
           onSubmit={handleSubmit}
         >
           <h2 className={AppStyles.pageTitle}>
-            <img src={getRootPath("/logo192.png")} alt="Logo" width="16" />{" "}
+            <img
+              src={getRootPath("/logo192.png")}
+              alt="Logo"
+              width="48"
+              style={{ verticalAlign: "middle" }}
+            />{" "}
             Sudoku Validator
           </h2>
           <div
