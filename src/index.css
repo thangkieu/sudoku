@@ -19,6 +19,7 @@ html {
     var(--input-width) * 9 + var(--cell-padding) * 8 + 2px + var(--cell-padding) *
       2 + var(--cell-padding) * 2
   );
+  background-color: var(--primary-color);
 }
 
 body {
@@ -30,6 +31,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--primary-color);
   padding: 1rem;
+  min-height: 100vh;
+  background-color: #ffffff;
+  border: 10px solid var(--primary-color);
+  border-radius: 34px;
 }
 
 @media screen and (min-width: 662px) {

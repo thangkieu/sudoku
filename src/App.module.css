@@ -76,7 +76,7 @@
   color: white;
   margin-top: 1.5rem;
   cursor: pointer;
-  box-shadow: var(--shadow-color) 4px 4px 0;
+  box-shadow: var(--shadow-color) 6px 6px 0;
   margin-left: 16px;
   display: inline-block;
   border: 1px solid var(--border-color);
@@ -86,7 +86,7 @@
   background-color: #ffeff1;
   border-color: currentColor;
   color: #eb455f;
-  box-shadow: #ffeff1 4px 4px 0;
+  box-shadow: #ffeff1 6px 6px 0;
 }
 
 .actions {
