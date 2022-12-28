@@ -16,11 +16,13 @@
   margin-right: var(--cell-padding);
   margin-bottom: var(--cell-padding);
   color: inherit;
+  padding: 0;
 }
 
 .input:focus {
   box-shadow: rgba(32, 82, 149, 0.15) 0px 15px 25px,
     rgba(32, 82, 149, 0.05) 0px 5px 10px;
+  background-color: #e2eeff;
 }
 
 /* Chrome, Safari, Edge, Opera */

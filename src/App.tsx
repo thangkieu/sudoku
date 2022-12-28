@@ -76,6 +76,8 @@ function App() {
                     key={`[${row}][${col}]`}
                     name={`[${row}][${col}]`}
                     isError={Boolean(errorCells[`${row}${col}`])}
+                    row={row}
+                    col={col}
                   />
                 ))}
               </React.Fragment>
